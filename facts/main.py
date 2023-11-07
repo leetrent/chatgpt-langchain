@@ -36,8 +36,7 @@ db = Chroma.from_documents(
 #     print(result[0].page_content)
 
 results = db.similarity_search(
-    "What is an interesting fact about the English language?",
-    k=1
+    "What is an interesting fact about the English language?"
 )
 
 for result in results:
