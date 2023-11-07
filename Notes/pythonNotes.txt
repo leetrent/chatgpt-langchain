@@ -3,3 +3,5 @@ $ pip install openai
 $ pip install langchain
 
 $ pip install python-dotenv
+
+$ pip install chromadb
