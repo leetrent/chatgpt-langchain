@@ -7,19 +7,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+embeddings = OpenAIEmbeddings()
+
 text_splitter = CharacterTextSplitter(
     separator="\n",
     chunk_size=200,
     chunk_overlap=0
 )
 
-
 loader = TextLoader("facts.txt")
 docs = loader.load_and_split(
     text_splitter=text_splitter
 )
-
-embeddings = OpenAIEmbeddings()
 
 db = Chroma.from_documents(
     docs,
